@@ -28,7 +28,7 @@ class admin extends CI_Controller {
 
     }
 
-    public function tambahPaket(){
+    public function addPaket(){
         {
             if($this->session->userdata('username')){
                 $this->form_validation->set_rules('namagedung', 'namaGedung', 'required');
@@ -128,6 +128,10 @@ class admin extends CI_Controller {
             redirect('admin/tambahPaket');
         }
     }
-    
-
+    public function deletePaket($idPaket){
+        $this->paketModel->deletePaket($idPaket);
+    }    
+    public fuction setRole($idUser,$role){
+        $this->userModel->setRole($idUser,$role);
+    }
 }
