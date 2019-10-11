@@ -9,7 +9,7 @@ class customer extends CI_Controller {
             $this->form_validation->set_rules('fname','fname','required|trim');
             $this->form_validation->set_rules('lname','lname','required|trim');
 		    $this->form_validation->set_rules('email','Email','required|trim|');
-		    $this->form_validation->set_rules('password','Password','required|trim|');
+		    $this->form_validation->set_rules('password','password','required|trim|');
 		    //$this->form_validation->set_rules('password-re','Password-re','required|trim|matches[password]');
 
             //validation check
@@ -17,6 +17,7 @@ class customer extends CI_Controller {
                //flashdata fail
                 $this->session->set_flashdata('message','<div class ="alert alert-danger role = alert">Register Gagal  </div>');
                 redirect(base_url());
+                
             }
             else {
             //insert data to array
