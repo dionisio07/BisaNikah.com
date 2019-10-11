@@ -19,75 +19,89 @@
 	<link rel="stylesheet" type="text/css" href="<?=base_url("assets/register.css") ?>">
 </head>
 <body>
+<?php echo $this->session->flashdata('message'); ?>
  <div class="container">
  <!---heading---->
-     <header class="heading"> Registration-Form</header><hr></hr>
-	<!---Form starting---->
-	<div class="row ">
-	 <!--- For Name---->
-         <div class="col-sm-12">
-             <div class="row">
-			     <div class="col-xs-4">
-          	         <label class="firstname">First Name :</label> </div>
-		         <div class="col-xs-8">
-		             <input type="text" name="fname" id="fname" placeholder="Enter your First Name" class="form-control ">
-             </div>
-		      </div>
-		 </div>
+	<form method="post" action="<?= base_url("customer/register ")?>"">
+		<header class="heading"> Registration-Form</header><hr></hr>
+		<!---Form starting---->
+		<div class="row ">
+		<!--username ---->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-xs-4">
+						<label class="firstname">Username :</label> </div>
+					<div class="col-xs-8">
+						<input type="text" name="username" id="fname" placeholder="Enter your Username" class="form-control ">
+						<?=form_error('username','<small class="text-danger">','</small>');?>
+				</div>
+				</div>
+			</div>
+		<!--- For Name---->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-xs-4">
+						<label class="firstname">First Name :</label> </div>
+					<div class="col-xs-8">
+						<input type="text" name="fname" id="fname" placeholder="Enter your First Name" class="form-control ">
+				</div>
+				</div>
+			</div>
 
 
-         <div class="col-sm-12">
-		     <div class="row">
-			     <div class="col-xs-4">
-                     <label class="lastname">Last Name :</label></div>
-				<div class ="col-xs-8">
-		             <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" class="form-control last">
-                </div>
-		     </div>
-		 </div>
-     <!-----For email---->
-		 <div class="col-sm-12">
-		     <div class="row">
-			     <div class="col-xs-4">
-		             <label class="mail" >Email :</label></div>
-			     <div class="col-xs-8"	>
-			          <input type="email" name="email"  id="email"placeholder="Enter your email" class="form-control" >
-		         </div>
-		     </div>
-		 </div>
-	 <!-----For Password and confirm password---->
-          <div class="col-sm-12">
-		         <div class="row">
-				     <div class="col-xs-4">
-		 	              <label class="pass">Password :</label></div>
-				  <div class="col-xs-8">
-			             <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control">
-				 </div>
-          </div>
-		  </div>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-xs-4">
+						<label class="lastname">Last Name :</label></div>
+					<div class ="col-xs-8">
+						<input type="text" name="lname" id="lname" placeholder="Enter your Last Name" class="form-control last">
+					</div>
+				</div>
+			</div>
+		<!-----For email---->
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-xs-4">
+						<label class="mail" >Email :</label></div>
+					<div class="col-xs-8"	>
+						<input type="email" name="email"  id="email"placeholder="Enter your email" class="form-control" >
+					</div>
+				</div>
+			</div>
+		<!-----For Password and confirm password---->
+			<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-4">
+							<label class="pass">Password :</label></div>
+					<div class="col-xs-8">
+							<input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control">
+					</div>
+			</div>
+			</div>
 
-     <!-----------For Phone number-------->
-         <div class="col-sm-12">
-		     <div class ="row">
-                 <div class="col-xs-4 ">
-			       <label class="gender">Gender:</label>
-				 </div>
+		<!-----------For Phone number-------->
+			<div class="col-sm-12">
+				<div class ="row">
+					<div class="col-xs-4 ">
+					<label class="gender">Gender:</label>
+					</div>
 
-			     <div class="col-xs-4 male">
-				     <input type="radio" name="gender"  id="gender" value="boy">Male</input>
-				 </div>
+					<div class="col-xs-4 male">
+						<input type="radio" name="gender"  id="gender" value="boy">Male</input>
+					</div>
 
-				 <div class="col-xs-4 female">
-				     <input type="radio"  name="gender" id="gender" value="girl" >Female</input>
-			     </div>
+					<div class="col-xs-4 female">
+						<input type="radio"  name="gender" id="gender" value="girl" >Female</input>
+					</div>
 
-		  	 </div>
-		     <div class="col-sm-12">
-		         <div class="btn btn-warning">Submit</div>
-		   </div>
-		 </div>
-	 </div>
-
+				</div>
+				<div class="col-sm-12">
+					
+					<button type="submit" class="btn btn-warning">Register</button>
+			</div>
+			</div>
+		</div>
+	</form>
 
 </div>
 
