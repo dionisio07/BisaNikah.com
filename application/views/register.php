@@ -11,7 +11,7 @@
      	<meta name="viewport" content="width=device-width, initial-scale=1">
          <!--Bootsrap 4 CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+
     <!--Fontawesome CDN-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -22,7 +22,7 @@
  <div class="container">
  <!---heading---->
      <header class="heading"> Registration-Form</header><hr></hr>
-	<!---Form starting----> 
+	<!---Form starting---->
 	<div class="row ">
 	 <!--- For Name---->
          <div class="col-sm-12">
@@ -34,13 +34,13 @@
              </div>
 		      </div>
 		 </div>
-		 
-		 
+
+
          <div class="col-sm-12">
 		     <div class="row">
 			     <div class="col-xs-4">
                      <label class="lastname">Last Name :</label></div>
-				<div class ="col-xs-8">	 
+				<div class ="col-xs-8">
 		             <input type="text" name="lname" id="lname" placeholder="Enter your Last Name" class="form-control last">
                 </div>
 		     </div>
@@ -50,7 +50,7 @@
 		     <div class="row">
 			     <div class="col-xs-4">
 		             <label class="mail" >Email :</label></div>
-			     <div class="col-xs-8"	>	 
+			     <div class="col-xs-8"	>
 			          <input type="email" name="email"  id="email"placeholder="Enter your email" class="form-control" >
 		         </div>
 		     </div>
@@ -65,33 +65,31 @@
 				 </div>
           </div>
 		  </div>
-		  
+
      <!-----------For Phone number-------->
          <div class="col-sm-12">
 		     <div class ="row">
                  <div class="col-xs-4 ">
 			       <label class="gender">Gender:</label>
 				 </div>
-			 
-			     <div class="col-xs-4 male">	 
+
+			     <div class="col-xs-4 male">
 				     <input type="radio" name="gender"  id="gender" value="boy">Male</input>
 				 </div>
-				 
+
 				 <div class="col-xs-4 female">
 				     <input type="radio"  name="gender" id="gender" value="girl" >Female</input>
 			     </div>
-			
+
 		  	 </div>
 		     <div class="col-sm-12">
 		         <div class="btn btn-warning">Submit</div>
 		   </div>
 		 </div>
-	 </div>	 
-		 		 
-		 
+	 </div>
+
+
 </div>
 
-</body>		
+</body>
 </html>
-	 
-	 
