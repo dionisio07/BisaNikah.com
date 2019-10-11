@@ -17,6 +17,7 @@
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="<?=base_url("assets/register.css") ?>">
+  
 </head>
 <body>
  <div class="container">
