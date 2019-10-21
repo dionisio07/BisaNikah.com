@@ -14,7 +14,7 @@
 <nav class="navbar navbar-inverse" style="background-color : #FCA8C2;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="<?= base_url() ?>">BisaNikah</a>
     </div>
     <ul class="nav navbar-nav" class="tulisan" style="font-family: 'roboto' color:#000000">
       <li class="active"><a href="#">Beranda</a></li>
