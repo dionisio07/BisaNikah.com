@@ -1,110 +1,74 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<!Doctype html>
-<html>
-<head>
-     <meta charset="UTF-8">
-     <title>Registration Form</title>
-     	<meta name="viewport" content="width=device-width, initial-scale=1">
-         <!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="<?=base_url("assets/register.css") ?>">
-  
-</head>
-<body>
-<?php echo $this->session->flashdata('message'); ?>
- <div class="container">
- <!---heading---->
-	<form method="post" action="<?= base_url("customer/register ")?>"">
-		<header class="heading"> Registration-Form</header><hr></hr>
-		<!---Form starting---->
-		<div class="row ">
-		<!--username ---->
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="col-xs-4">
-						<label class="firstname">Username :</label> </div>
-					<div class="col-xs-8">
-						<input type="text" name="username" id="fname" placeholder="Enter your Username" class="form-control ">
-						<?=form_error('username','<small class="text-danger">','</small>');?>
-				</div>
-				</div>
-			</div>
-		<!--- For Name---->
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="col-xs-4">
-						<label class="firstname">First Name :</label> </div>
-					<div class="col-xs-8">
-						<input type="text" name="fname" id="fname" placeholder="Enter your First Name" class="form-control ">
-				</div>
-				</div>
-			</div>
-
-
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="col-xs-4">
-						<label class="lastname">Last Name :</label></div>
-					<div class ="col-xs-8">
-						<input type="text" name="lname" id="lname" placeholder="Enter your Last Name" class="form-control last">
-					</div>
-				</div>
-			</div>
-		<!-----For email---->
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="col-xs-4">
-						<label class="mail" >Email :</label></div>
-					<div class="col-xs-8"	>
-						<input type="email" name="email"  id="email"placeholder="Enter your email" class="form-control" >
-					</div>
-				</div>
-			</div>
-		<!-----For Password and confirm password---->
-			<div class="col-sm-12">
-					<div class="row">
-						<div class="col-xs-4">
-							<label class="pass">Password :</label></div>
-					<div class="col-xs-8">
-							<input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control">
-					</div>
-			</div>
-			</div>
-
-		<!-----------For Phone number-------->
-			<div class="col-sm-12">
-				<div class ="row">
-					<div class="col-xs-4 ">
-					<label class="gender">Gender:</label>
-					</div>
-
-					<div class="col-xs-4 male">
-						<input type="radio" name="gender"  id="gender" value="boy">Male</input>
-					</div>
-
-					<div class="col-xs-4 female">
-						<input type="radio"  name="gender" id="gender" value="girl" >Female</input>
-					</div>
-
-				</div>
-				<div class="col-sm-12">
-					
-					<button type="submit" class="btn btn-warning">Register</button>
-			</div>
-			</div>
-		</div>
-	</form>
-
-</div>
-
-</body>
-</html>
+	   <!-- cart-main-area start -->
+        <div class="checkout-wrap ptb--100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="checkout__inner">
+                            <div class="accordion-list">
+                                <div class="accordion">
+                                    <div class="accordion__body">
+                                        <div class="accordion__body__form">
+                                            <div class="row">
+                                                <div class="col-md-7-center">
+                                                    <div class="checkout-method__login">
+                                                        <form method = 'post' action='<?= base_url('customer/register') ?>'>
+                                                            <center><h5 class="checkout-method__title">Register</h5></center>
+															<?php echo $this->session->flashdata('message'); ?>
+															<div class="single-input">
+															<label for="user-text">Username</label>
+                                                                <input type="text" name="username" value="<?= set_value('username') ?>">
+																<?=form_error('username','<small class="text-danger">','</small>');?>
+                                                            </div>
+                                                            <div class="single-input">
+                                                                <label for="user-email">Email Address</label>
+                                                                <input type="email" id="user-email" name="email" value="<?= set_value('email') ?>">
+																<?=form_error('email','<small class="text-danger">','</small>');?>
+                                                            </div>
+															<div class="single-input">
+																<label for="user-text">First Name</label>
+                                                                <input type="text" name="fname" value="<?= set_value('fname') ?>">
+																<?=form_error('fname','<small class="text-danger">','</small>');?>
+                                                            </div>
+															<div class="single-input">
+																<label for="user-text">Last Name</label>
+                                                                <input type="text" name="lname" value="<?= set_value('lname') ?>">
+																<?=form_error('lname','<small class="text-danger">','</small>');?>
+                                                            </div>
+															<div class="single-input">
+                                                                <label for="user-pass">Password</label>
+                                                                <input type="password" id="user-pass" name="password">
+																<?=form_error('password','<small class="text-danger">','</small>');?>
+                                                            </div>
+															<div class="single-input">
+                                                                <label for="user-pass">Re Password</label>
+                                                                <input type="password" name ="repassword" id="re-pass">
+																<?=form_error('repassword','<small class="text-danger">','</small>');?>
+                                                            </div>
+															<div class="single-input">
+															<label for="user-text">Jenis Kelamin</label>
+																<div class="form-check form-check-inline">
+  																	<input class="form-check-input" type="radio" name="jenisKelamin" id="jenisKelamin" value="Laki Laki">
+  																	<label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
+																	<input class="form-check-input" type="radio" name="jenisKelamin" id="jenisKelamin" value="Perempuan">
+  																	<label class="form-check-label" for="inlineRadio1">Perempuan</label>
+																</div>
+															</div>
+                                                            <p class="require">* Required fields</p>
+                                                            <div class="dark-btn">
+																<center><button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button></center>
+                                                            </div>	
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cart-main-area end -->

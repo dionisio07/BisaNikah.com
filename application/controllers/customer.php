@@ -5,19 +5,20 @@ class customer extends CI_Controller {
 
     public function register(){
          //validation form
-            $this->form_validation->set_rules('username','username','required|trim');
-            $this->form_validation->set_rules('fname','fname','required|trim');
-            $this->form_validation->set_rules('lname','lname','required|trim');
-		    $this->form_validation->set_rules('email','Email','required|trim|');
-		    $this->form_validation->set_rules('password','password','required|trim|');
-		    //$this->form_validation->set_rules('password-re','Password-re','required|trim|matches[password]');
+            $this->form_validation->set_rules('username','Username','required|trim');
+            $this->form_validation->set_rules('fname','Fname','required|trim');
+            $this->form_validation->set_rules('lname','Lname','required|trim');
+		        $this->form_validation->set_rules('email','Email','required|trim');
+		        $this->form_validation->set_rules('password','Password','required|trim');
+		        $this->form_validation->set_rules('repassword','RePassword','required|trim|matches[password]');
 
             //validation check
             if($this->form_validation->run()== false){
                //flashdata fail
-                $this->session->set_flashdata('message','<div class ="alert alert-danger role = alert">Register Gagal  </div>');
-                redirect(base_url());
-                
+                $this->session->set_flashdata('message','<div class ="alert alert-danger role = alert">Gagal Melakuan registrasi  </div>');
+                $this->load->view('header');
+		            $this->load->view('register');
+		            $this->load->view('footer');	
             }
             else {
             //insert data to array
@@ -32,8 +33,7 @@ class customer extends CI_Controller {
                 // memanggil method registCst dari model
               //  $this->M_Customer->regisCst($data);
                 //flashdata sukses
-                $this->session->set_flashdata('message','<div class ="alert alert-success role = alert">Register Berhasil </div>'); 
-                redirect(base_url()); 
+                echo "sukses";
               
             }
     }
