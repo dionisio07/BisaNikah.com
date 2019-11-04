@@ -48,17 +48,21 @@
 															<div class="single-input">
 															<label for="user-text">Jenis Kelamin</label>
 																<div class="form-check form-check-inline">
-  																	<input class="form-check-input" type="radio" name="jenisKelamin" id="jenisKelamin" value="Laki Laki">
+  																	<input class="form-check-input" type="radio" name="jenisKelamin" id="jenisKelamin" value="Laki-Laki">
   																	<label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
 																	<input class="form-check-input" type="radio" name="jenisKelamin" id="jenisKelamin" value="Perempuan">
   																	<label class="form-check-label" for="inlineRadio1">Perempuan</label>
 																</div>
+                                                                <?=form_error('jenisKelamin','<small class="text-danger">','</small>');?>
 															</div>
                                                             <p class="require">* Required fields</p>
                                                             <div class="dark-btn">
-																<center><button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button></center>
+																<center><button type="submit" class="btn btn-success btn-lg btn-block">Register</button></center>
                                                             </div>	
                                                         </form>
+                                                        <div class="dark-btn">
+																<center><a href="<?= base_url('Welcome/login') ?>" class="btn btn-primary btn-lg btn-block" >Login</a></center>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
