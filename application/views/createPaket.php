@@ -25,19 +25,66 @@
                                                                 <input type="number" class="form-control" name="harga" value="<?= set_value('harga') ?>">
 																<?=form_error('harga','<small class="text-danger">','</small>');?>
                                                             </div>
+                                                            <div class="form-group">
+                                                                <label for="sel1">Lokasi:</label>
+                                                                    <select class="form-control" >
+                                                                        <?php foreach($lokasi as $l){ ?>
+                                                                            <option value="<?php echo $l['idLokasi'];?>"><?php echo $l['kota']; ?></option>
+                                                                        <?php } ?>       
+                                                                    </select>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input" value="decoration">Gedung
+                                                                </label>
+                                                            </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
                                                                     <input type="checkbox" class="form-check-input" value="decoration">Decoration
                                                                 </label>
-                                                                </div>
-                                                                <div class="form-check">
+                                                            </div>
+                                                            <div class="form-check">
                                                                 <label class="form-check-label">
                                                                     <input type="checkbox" class="form-check-input" value="catering">Catering
                                                                 </label>
-                                                                </div>
-                                                                <div class="form-check">
+                                                            </div>
+                                                            <div class="form-check">
                                                                 <label class="form-check-label">
-                                                                    <input type="checkbox" class="form-check-input" value="music" >Music
+                                                                    <input type="checkbox" class="form-check-input" value="cake" >Wedding Cake
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input" value="music" >Band
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input" value="wo" >Wedding Organizer
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input" value="mc" >Master of Ceremony
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input" value="mc" >Documentation
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <label class="form-check-label">
+                                                                    <input type="checkbox" class="form-check-input" value="mc" >Makeup
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="comment">Deskripsi:</label>
+                                                                <textarea class="form-control" rows="5" ></textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    <input type="file" name="pic" accept="image/*">
                                                                 </label>
                                                             </div>
 				                                            <p class="require">* Required fields</p>

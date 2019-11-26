@@ -75,6 +75,12 @@ class customer extends CI_Controller {
         $this->load->view('contact');
         $this->load->view('footer');	
     }
+    public function detailPaket(){
+        $this->load->view('header');
+        $this->load->view('product-details');
+        $this->load->view('footer');	
+    }
+
     public function showPaket(){
 
     }

@@ -94,7 +94,7 @@
                 scrollwheel: false,
 
                 // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(23.7286, 90.3854), // New York
+                center: new google.maps.LatLng(-6.9743635,107.6307971), // New York
 
                 // How you would like to style the map. 
                 // This is where you would paste any style found on Snazzy Maps.
@@ -276,7 +276,7 @@
 
             // Let's also add a marker while we're at it
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(23.7286, 90.3854),
+                position: new google.maps.LatLng(-6.9743635,107.6307971),
                 map: map,
                 title: 'Ramble!',
                 icon: 'images/icons/map-2.png',
