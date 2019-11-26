@@ -12,7 +12,7 @@
                                             <div class="row">
                                                 <div class="col-md-7-center">
                                                     <div class="checkout-method__login">
-                                                        <form method = 'post' action='<?= base_url('customer/register') ?>'>
+                                                        <form method = 'post' action='<?= base_url('customer/login') ?>'>
                                                             <center><h5 class="checkout-method__title">Login</h5></center>
 															<?php echo $this->session->flashdata('message'); ?>
 															<div class="single-input">

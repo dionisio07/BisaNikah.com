@@ -13,8 +13,8 @@ class customer extends CI_Controller {
             $this->form_validation->set_rules('username','Username','required|trim|is_unique[user.username]');
             $this->form_validation->set_rules('fname','Fname','required|trim|is_unique[user.email]');
             $this->form_validation->set_rules('lname','Lname','required|trim');
-		        $this->form_validation->set_rules('email','Email','required|trim');
-		        $this->form_validation->set_rules('password','Password','required|trim');
+		    $this->form_validation->set_rules('email','Email','required|trim');
+		    $this->form_validation->set_rules('password','Password','required|trim');
             $this->form_validation->set_rules('repassword','RePassword','required|trim|matches[password]');
             $this->form_validation->set_rules('jenisKelamin','jenisKelamin','required');
 
@@ -29,11 +29,11 @@ class customer extends CI_Controller {
             else {
             //insert data to array
                $data = [
-                    'username' =>$this->input->post('username'),
+                    'username' =>htmlspecialchars($this->input->post('username',true)),
                     'idRole' =>1,
-                    'firstName' =>$this->input->post('fname'),
-                    'lastName'=>$this->input->post('lname'),   
-                    'password' =>password_hash( $this->input->post('password'),PASSWORD_DEFAULT),
+                    'firstName' =>htmlspecialchars($this->input->post('fname',true)),
+                    'lastName'=>htmlspecialchars($this->input->post('lname',true)),   
+                    'password' =>password_hash($this->input->post('password'),PASSWORD_DEFAULT),
                     'email'=>$this->input->post('email'),
                     'gender'=>$this->input->post('jenisKelamin')
                 ];
@@ -52,15 +52,29 @@ class customer extends CI_Controller {
       if($this->form_validation->run()== false){
           $this->session->set_flashdata('message','<div class ="alert alert-danger role = alert">Username atau Password Kosong</div>');
           $this->load->view('header');
-		  $this->load->view('register');
+		  $this->load->view('login');
 		  $this->load->view('footer');	
       }
       else{
-        
+          $query = $this->userModel->getUser($this->input->post('username'));
+          if(($query)&&(password_verify($this->input->post('password'), $query["password" ]))){
+                $this->session->set_userdata($query);
+                $data = $this->userModel->getUser($this->session->userdata('username'));
+                redirect(base_url());
+          }else{
+            $this->session->set_flashdata('message','<div class ="alert alert-danger role = alert">Username atau Password Salah</div>');
+            $this->load->view('header');
+            $this->load->view('login');
+            $this->load->view('footer');	
+          };
       }
 
     }
-
+    public function contact(){
+        $this->load->view('header');
+        $this->load->view('contact');
+        $this->load->view('footer');	
+    }
     public function showPaket(){
 
     }
@@ -91,6 +105,9 @@ class customer extends CI_Controller {
     public function konfirmasiPesanan(){
 
     }
-
+    public function logout(){
+        $this->session->unset_userdata('username');
+        redirect(base_url());
+    }
 
 }
