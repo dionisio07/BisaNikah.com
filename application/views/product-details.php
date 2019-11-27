@@ -10,7 +10,7 @@
                                   <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
                                   <a class="breadcrumb-item" href="product-grid.html">Products</a>
                                   <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                                  <span class="breadcrumb-item active">Paket 1</span>
+                                  <span class="breadcrumb-item active"><?= $paket['namaPaket'] ?></span>
                                 </nav>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                                 <div class="product__big__images">
                                     <div class="portfolio-full-image tab-content">
                                         <div role="tabpanel" class="tab-pane fade in active" id="img-tab-1">
-                                            <img src="<?= base_url("assets/images/product-2/big-img/1.jpg") ?>" alt="full-image">
+                                            <img src="<?= base_url("upload/".$paket['gambar']) ?>" alt="full-image" width="510px" height="667px">
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="img-tab-2">
                                             <img src="<?= base_url("assets/images/product-2/big-img/2.jpg") ?>" alt="full-image">
@@ -42,68 +42,26 @@
                                     </div>
                                 </div>
                                 <!-- End Product Big Images -->
-                                <!-- Start Small images -->
-                                <ul class="product__small__images" role="tablist">
-                                    <li role="presentation" class="pot-small-img active">
-                                        <a href="#img-tab-1" role="tab" data-toggle="tab">
-                                            <img src="<?= base_url("assets/images/product-2/sm-img-3/3.jpg") ?>" alt="small-image">
-                                        </a>
-                                    </li>
-                                    <li role="presentation" class="pot-small-img">
-                                        <a href="#img-tab-2" role="tab" data-toggle="tab">
-                                            <img src="<?= base_url("assets/images/product-2/sm-img-3/1.jpg") ?>" alt="small-image">
-                                        </a>
-                                    </li>
-                                    <li role="presentation" class="pot-small-img">
-                                        <a href="#img-tab-3" role="tab" data-toggle="tab">
-                                            <img src="<?= base_url("assets/images/product-2/sm-img-3/2.jpg") ?>" alt="small-image">
-                                        </a>
-                                    </li>
-                                </ul>
-                                <!-- End Small images -->
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12 smt-40 xmt-40">
                             <div class="ht__product__dtl">
-                                <h2>Paket 1</h2>
-                                <h6>Lokasi: <span>Bandung</span></h6>
+                                <h2><?= $paket['namaPaket'] ?></h2>
+                                <h6>Lokasi: <span><?= $lokasi['kota'] ?></span></h6>
                                 <ul  class="pro__prize">
-                                    <li>Rp.50.000.000</li>
+                                    <li><?= $paket['namaPaket'] ?></li>
                                 </ul>
-                                <p class="pro__info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</p>
-                                <div class="ht__pro__desc">
-                                    <div class="sin__desc">
-                                        <p><span>Status:</span>Tersedia</p>
-                                    </div>
-                                    <div class="sin__desc align--left">
-                                        <p><span>Fasilitas:</span></p>
-                                        <ul class="pro__cat__list">
-                                            <li><a href="#">Catering,</a></li>
-                                            <li><a href="#">Dekorasi,</a></li>
-                                            <li><a href="#">Band,</a></li>
-                                            <li><a href="#">WO,</a></li>
-                                            <li><a href="#">Cameraman,</a></li>
-                                            <li><a href="#">MC</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="sin__desc product__share__link">
-                                        <p><span>Share this:</span></p>
-                                        <ul class="pro__share">
-                                            <li><a href="#" target="_blank"><i class="icon-social-twitter icons"></i></a></li>
-
-                                            <li><a href="#" target="_blank"><i class="icon-social-instagram icons"></i></a></li>
-
-                                            <li><a href="https://www.facebook.com/Furny/?ref=bookmarks" target="_blank"><i class="icon-social-facebook icons"></i></a></li>
-
-                                            <li><a href="#" target="_blank"><i class="icon-social-google icons"></i></a></li>
-
-                                            <li><a href="#" target="_blank"><i class="icon-social-linkedin icons"></i></a></li>
-
-                                            <li><a href="#" target="_blank"><i class="icon-social-pinterest icons"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <p>Fasilitas:  </p>
+                                <p class="pro__info"><?= $paket['gedung'] ?>,<?= $paket['decoration'] ?>,<?= $paket['catering'] ?>,<?= $paket['cake'] ?>,<?= $paket['band'] ?>,
+                                    <?= $paket['wo'] ?>,<?= $paket['mc'] ?>,<?= $paket['dokumentasi'] ?>,<?= $paket['decoration'] ?>,<?= $paket['makeup'] ?>
+                                </p>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-success btn-lg btn-block">Pesan </a>
+                                <a href="" class="btn btn-primary btn-lg btn-block">Custom </a>
+                                <?php if ($this->session->userdata('idRole')==2) {?>
+                                    <a href="" class="btn btn-danger btn-lg btn-block">Edit </a>
+                                <?php }?>
                             </div>
                         </div>
                     </div>
@@ -130,10 +88,8 @@
                             <!-- Start Single Content -->
                             <div role="tabpanel" id="description" class="pro__single__content tab-pane fade in active">
                                 <div class="pro__tab__content__inner">
-                                    <p>Formfitting clothing is all about a sweet spot. That elusive place where an item is tight but not clingy, sexy but not cloying, cool but not over the top. Alexandra Alvarez’s label, Alix, hits that mark with its range of comfortable, minimal, and neutral-hued bodysuits.</p>
                                     <h4 class="ht__pro__title">Description</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                                    <p> <?= $paket['deskripsi'] ?> </p>
                                 </div>
                             </div>
                             <!-- End Single Content -->

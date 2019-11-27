@@ -505,9 +505,9 @@
                     </div>
                     <ul class="shopping__btn">
                         <li><a href="#">Profil</a></li>
-                        <li><a href="#">CheckOut</a></li>
+                        <li><a href="<?= base_url('Welcome/cart')?>">CheckOut</a></li>
                         <li><a href="<?= Base_url("admin/createPaket") ?>">Create Paket</a></li>
-                        <li><a href="#">List Paket</a></li>
+                        <li><a href="<?= Base_url("admin/showPaket") ?>">List Paket</a></li>
                         <li><a href="<?= Base_url("customer/logout") ?>">Logout</a></li>
                     </ul>
                 </div>

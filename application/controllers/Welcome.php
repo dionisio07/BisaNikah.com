@@ -34,4 +34,9 @@ class Welcome extends CI_Controller {
 		$this->load->view('login');
 		$this->load->view('footer');	
 	}
+	public function cart(){
+		$this->load->view('header');
+		$this->load->view('cart');
+		$this->load->view('footer');	
+	}
 }
