@@ -9,18 +9,18 @@
                             <div class="footer">
                                 <h2 class="title__line--2">ABOUT US</h2>
                                 <div class="ft__details">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</p>
+                                    <p>aplikasi ini hanya dibuat untuk tugas impal:)</p>
                                     <div class="ft__social__link">
                                         <ul class="social__link">
-                                            <li><a href="#"><i class="icon-social-twitter icons"></i></a></li>
+                                            <li><a href="https://twitter.com"><i class="icon-social-twitter icons"></i></a></li>
 
-                                            <li><a href="#"><i class="icon-social-instagram icons"></i></a></li>
+                                            <li><a href="https://instagram.com"><i class="icon-social-instagram icons"></i></a></li>
 
-                                            <li><a href="#"><i class="icon-social-facebook icons"></i></a></li>
+                                            <li><a href="https://facebook.com"><i class="icon-social-facebook icons"></i></a></li>
 
-                                            <li><a href="#"><i class="icon-social-google icons"></i></a></li>
+                                            <li><a href="https://google.com"><i class="icon-social-google icons"></i></a></li>
 
-                                            <li><a href="#"><i class="icon-social-linkedin icons"></i></a></li>
+                                            <li><a href="https://linkedin.com"><i class="icon-social-linkedin icons"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -30,21 +30,20 @@
                         <!-- Start Single Footer Widget -->
                         <div class="col-md-2 col-sm-6 col-xs-12 xmt-40">
                             <div class="footer">
-                                <h2 class="title__line--2">information</h2>
+                                <h2 class="title__line--2">Document</h2>
                                 <div class="ft__inner">
                                     <ul class="ft__list">
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Delivery Information</a></li>
-                                        <li><a href="#">Privacy & Policy</a></li>
-                                        <li><a href="#">Terms  & Condition</a></li>
-                                        <li><a href="#">Manufactures</a></li>
+                                        <li><a href="https://github.com/dionisio07/BisaNikah.com/blob/master/FileLaporan/SKPL%20BisaNikah.pdf" target="blank">SKPL</a></li>
+                                        <li><a href="https://github.com/dionisio07/BisaNikah.com/blob/master/FileLaporan/DPPL%20BisaNikah.pdf" target="blank">DPPL</a></li>
+                                        <li><a href="https://google.co.id">DUPL</a></li>
+                                        <li><a href="https://google.co.id">User Manual</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <!-- End Single Footer Widget -->
                         <!-- Start Single Footer Widget -->
-                        <div class="col-md-2 col-sm-6 col-xs-12 xmt-40 smt-40">
+                        <!-- <div class="col-md-2 col-sm-6 col-xs-12 xmt-40 smt-40">
                             <div class="footer">
                                 <h2 class="title__line--2">my account</h2>
                                 <div class="ft__inner">
@@ -57,7 +56,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Footer Widget -->
                         <!-- Start Single Footer Widget -->
                         <div class="col-md-2 col-sm-6 col-xs-12 xmt-40 smt-40">
@@ -76,7 +75,7 @@
                         </div>
                         <!-- End Single Footer Widget -->
                         <!-- Start Single Footer Widget -->
-                        <div class="col-md-3 col-sm-6 col-xs-12 xmt-40 smt-40">
+                        <!-- <div class="col-md-3 col-sm-6 col-xs-12 xmt-40 smt-40">
                             <div class="footer">
                                 <h2 class="title__line--2">NEWSLETTER </h2>
                                 <div class="ft__inner">
@@ -86,10 +85,10 @@
                                             <a class="fr__btn" href="#">Send Mail</a>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Footer Widget -->
                     </div>
                 </div>
