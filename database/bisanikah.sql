@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Nov 2019 pada 05.53
+-- Waktu pembuatan: 29 Nov 2019 pada 09.26
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -21,33 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `bisanikah`
 --
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `kelola_keuangan`
---
-
-CREATE TABLE `kelola_keuangan` (
-  `idKelolaKeuangan` int(11) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `idPembayaran` int(20) NOT NULL,
-  `tglKelola` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `kelola_paket`
---
-
-CREATE TABLE `kelola_paket` (
-  `idKelola` int(11) NOT NULL,
-  `idPaket` int(11) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `tglKelola` date NOT NULL,
-  `keterangan` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -77,12 +50,28 @@ INSERT INTO `lokasi` (`idLokasi`, `kota`) VALUES
 
 CREATE TABLE `paket` (
   `idPaket` int(11) NOT NULL,
-  `namaPaket` varchar(20) NOT NULL,
-  `harga` mediumint(9) NOT NULL,
-  `keterangan` longtext NOT NULL,
-  `isTersedia` tinyint(1) NOT NULL,
-  `idLokasi` int(11) NOT NULL
+  `namaPaket` varchar(100) NOT NULL,
+  `harga` bigint(20) NOT NULL,
+  `deskripsi` longtext NOT NULL,
+  `gedung` varchar(20) DEFAULT NULL,
+  `decoration` varchar(20) DEFAULT NULL,
+  `catering` varchar(20) DEFAULT NULL,
+  `cake` varchar(20) DEFAULT NULL,
+  `band` varchar(20) DEFAULT NULL,
+  `wo` varchar(20) DEFAULT NULL,
+  `mc` varchar(20) DEFAULT NULL,
+  `dokumentasi` varchar(20) DEFAULT NULL,
+  `makeup` varchar(20) DEFAULT NULL,
+  `idLokasi` int(11) NOT NULL,
+  `gambar` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `paket`
+--
+
+INSERT INTO `paket` (`idPaket`, `namaPaket`, `harga`, `deskripsi`, `gedung`, `decoration`, `catering`, `cake`, `band`, `wo`, `mc`, `dokumentasi`, `makeup`, `idLokasi`, `gambar`) VALUES
+(3, 'Paket pernikahan silver', 50000000, 'mantap', 'Gedung', 'Decoration', 'Catering', 'Wedding Cake', 'Band', 'Wedding Organizer', 'Master of Ceremony', 'Documentation', 'Makeup', 1, 'gambar1.jpg');
 
 -- --------------------------------------------------------
 
@@ -134,7 +123,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`username`, `idRole`, `firstName`, `lastName`, `password`, `email`, `gender`) VALUES
 ('admin', 2, 'admin', 'admin', '$2y$10$8otpx6kN1PNfraWgvVGnn.QuMnvVA35n5YEw1HWWh3M4Vrj5Sz3Sm', 'admin@admin.com', 'Laki-Laki'),
-('dionisio07', 1, 'Dionisio', 'Febrianto', '$2y$10$pcdXJTvQjbDQf0a7dKwJR.8zm9vplqCd4w/9DPRgHfsW/1Td/9mpO', 'dio.721999@gmail.com', 'Laki-Laki');
+('dionisio07', 1, 'Dionisio', 'Febrianto', '$2y$10$pcdXJTvQjbDQf0a7dKwJR.8zm9vplqCd4w/9DPRgHfsW/1Td/9mpO', 'dio.721999@gmail.com', 'Laki-Laki'),
+('test', 1, 'test', 'test', '$2y$10$FsbMgEPh/8RlzbB084rSi.vHrlhsiDhSO5CEujmj3/PybtRLyD1cy', 'tes@gmail.com', 'Perempuan');
 
 -- --------------------------------------------------------
 
@@ -159,22 +149,6 @@ INSERT INTO `userrole` (`idRole`, `namaRole`) VALUES
 --
 -- Indexes for dumped tables
 --
-
---
--- Indeks untuk tabel `kelola_keuangan`
---
-ALTER TABLE `kelola_keuangan`
-  ADD PRIMARY KEY (`idKelolaKeuangan`),
-  ADD KEY `pembayaran_fk` (`idPembayaran`),
-  ADD KEY `bendahara_fk` (`username`);
-
---
--- Indeks untuk tabel `kelola_paket`
---
-ALTER TABLE `kelola_paket`
-  ADD PRIMARY KEY (`idKelola`),
-  ADD KEY `kelola_paket_fk` (`idPaket`),
-  ADD KEY `kelola_paket_admin_fk` (`username`);
 
 --
 -- Indeks untuk tabel `lokasi`
@@ -202,7 +176,7 @@ ALTER TABLE `pembayaran`
 ALTER TABLE `pesanan`
   ADD PRIMARY KEY (`idPesanan`),
   ADD KEY `paket_fk` (`idPaket`),
-  ADD KEY `custumer_fk` (`username`);
+  ADD KEY `customer_FK` (`username`);
 
 --
 -- Indeks untuk tabel `user`
@@ -222,18 +196,6 @@ ALTER TABLE `userrole`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `kelola_keuangan`
---
-ALTER TABLE `kelola_keuangan`
-  MODIFY `idKelolaKeuangan` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT untuk tabel `kelola_paket`
---
-ALTER TABLE `kelola_paket`
-  MODIFY `idKelola` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT untuk tabel `lokasi`
 --
 ALTER TABLE `lokasi`
@@ -243,7 +205,7 @@ ALTER TABLE `lokasi`
 -- AUTO_INCREMENT untuk tabel `paket`
 --
 ALTER TABLE `paket`
-  MODIFY `idPaket` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPaket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `pembayaran`
@@ -268,20 +230,6 @@ ALTER TABLE `userrole`
 --
 
 --
--- Ketidakleluasaan untuk tabel `kelola_keuangan`
---
-ALTER TABLE `kelola_keuangan`
-  ADD CONSTRAINT `bendahara_fk` FOREIGN KEY (`username`) REFERENCES `user` (`username`),
-  ADD CONSTRAINT `pembayaran_fk` FOREIGN KEY (`idPembayaran`) REFERENCES `pembayaran` (`idPembayaran`);
-
---
--- Ketidakleluasaan untuk tabel `kelola_paket`
---
-ALTER TABLE `kelola_paket`
-  ADD CONSTRAINT `kelola_paket_admin_fk` FOREIGN KEY (`username`) REFERENCES `user` (`username`),
-  ADD CONSTRAINT `kelola_paket_fk` FOREIGN KEY (`idPaket`) REFERENCES `paket` (`idPaket`);
-
---
 -- Ketidakleluasaan untuk tabel `paket`
 --
 ALTER TABLE `paket`
@@ -297,7 +245,7 @@ ALTER TABLE `pembayaran`
 -- Ketidakleluasaan untuk tabel `pesanan`
 --
 ALTER TABLE `pesanan`
-  ADD CONSTRAINT `custumer_fk` FOREIGN KEY (`username`) REFERENCES `customer` (`username`),
+  ADD CONSTRAINT `customer_FK` FOREIGN KEY (`username`) REFERENCES `user` (`username`),
   ADD CONSTRAINT `paket_fk` FOREIGN KEY (`idPaket`) REFERENCES `paket` (`idPaket`);
 
 --
