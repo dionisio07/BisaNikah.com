@@ -18,7 +18,20 @@ class adminModel extends CI_Model{
     public function getLocationById($id){
         return $this->db->get_where('lokasi',array('idLokasi'=>$id))->row_array();
     }
+    public function editPaket($data){
+        if($data['gambar']){
+            $this->db->where('idPaket',$data['idPaket']);
+            $this->db->update('paket',$data);
 
+        }else{
+            $this->db->where('idPaket',$data['idPaket']);
+            $this->db->update('paket',$data);
+        }
+    }
+    public function deletePaket($id){
+        $this->db->where('idPaket', $id);
+        $this->db->delete('paket');
+    }
 
 
 

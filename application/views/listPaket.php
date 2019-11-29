@@ -27,7 +27,7 @@
                                             <td class="product-thumbnail"><a href="#"><img src="<?= base_url("upload/".$p['gambar']);?>" alt="product img" width="385px" height="260px"></a></td>
                                             <td class="product-name"><a href="<?= base_url("admin/detailPaket/".$p['idPaket']) ?>"><?= $p['namaPaket'] ?></a></td>
                                             <td class="product-price"><span class="amount">Rp.<?= $p['harga'] ?></span></td>
-                                            <td class="product-remove"><a href="#"><i class="icon-trash icons"></i></a></td>
+                                            <td class="product-remove"><a href="<?= base_url('admin/deletePaket/'.$p['idPaket']) ?>"><i class="icon-trash icons"></i></a></td>
                                         </tr>
                                         <?php }?>
                                     </tbody>

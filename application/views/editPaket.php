@@ -12,17 +12,17 @@
                                             <div class="row">
                                                 <div class="col-md-7-center">
                                                     <div class="checkout-method__login">
-                                                        <?php echo form_open_multipart('admin/addPaket'); ?>
-                                                            <center><h5 class="checkout-method__title">Create Paket</h5></center>
+                                                        <?php echo form_open_multipart('admin/editPaket/'.$paket['idPaket']); ?>
+                                                            <center><h5 class="checkout-method__title">Edit Paket</h5></center>
 															<?php echo $this->session->flashdata('message'); ?>
 															<div class="single-input">
 															    <label for="user-text">Nama Paket</label>
-                                                                <input type="text" name="namaPaket" value="<?= set_value('namaPaket') ?>">
+                                                                <input type="text" name="namaPaket" value="<?= $paket['namaPaket'] ?>">
 																<?=form_error('namaPaket','<small class="text-danger">','</small>');?>
                                                             </div>
 															<div class="single-input">
                                                                 <label for="user-text">Harga</label>
-                                                                <input type="number" class="form-control" name="harga" value="<?= set_value('harga') ?>">
+                                                                <input type="number" class="form-control" name="harga" value="<?= $paket['harga'] ?>">
 																<?=form_error('harga','<small class="text-danger">','</small>');?>
                                                             </div>
                                                             <div class="form-group">
@@ -35,52 +35,88 @@
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
-                                                                    <input type="checkbox" class="form-check-input" value="Gedung" name="gedung" >Gedung
+                                                                    <?php if ($paket['gedung']) {?>
+                                                                        <input type="checkbox" class="form-check-input" value="Gedung" name="gedung" checked >Gedung
+                                                                    <?php }else { ?>
+                                                                        <input type="checkbox" class="form-check-input" value="Gedung" name="gedung" >Gedung
+                                                                    <?php } ?>
                                                                 </label>
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
+                                                                <?php if ($paket['decoration']) {?>
+                                                                    <input type="checkbox" class="form-check-input" value="Decoration" name="decoration" checked>Decoration
+                                                                <?php }else { ?>
                                                                     <input type="checkbox" class="form-check-input" value="Decoration" name="decoration">Decoration
+                                                                <?php } ?>
                                                                 </label>
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
+                                                                <?php if ($paket['catering']) {?>
+                                                                    <input type="checkbox" class="form-check-input" value="Catering" name="catering" checked>Catering
+                                                                <?php }else { ?> 
                                                                     <input type="checkbox" class="form-check-input" value="Catering" name="catering">Catering
+                                                                <?php } ?> 
                                                                 </label>
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
+                                                                <?php if ($paket['cake']) {?>
+                                                                    <input type="checkbox" class="form-check-input" value="Wedding Cake" name="cake" checked>Wedding Cake
+                                                                <?php }else { ?>
                                                                     <input type="checkbox" class="form-check-input" value="Wedding Cake" name="cake">Wedding Cake
+                                                                <?php } ?>
                                                                 </label>
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
+                                                                <?php if ($paket['band']) {?>
+                                                                    <input type="checkbox" class="form-check-input" value="Band" name="band" checked>Band
+                                                                <?php }else { ?>
                                                                     <input type="checkbox" class="form-check-input" value="Band" name="band">Band
+                                                                <?php } ?>
                                                                 </label>
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
+                                                                <?php if ($paket['wo']) {?>
+                                                                    <input type="checkbox" class="form-check-input" value="Wedding Organizer" name="wo" checked>Wedding Organizer
+                                                                </label>
+                                                                <?php }else { ?>
                                                                     <input type="checkbox" class="form-check-input" value="Wedding Organizer" name="wo">Wedding Organizer
-                                                                </label>
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
-                                                                    <input type="checkbox" class="form-check-input" value="Master of Ceremony" name="mc">Master of Ceremony
+                                                                <?php if ($paket['mc']) {?>
+                                                                    <input type="checkbox" class="form-check-input" value="Master of Ceremony" name="mc"checked>Master of Ceremony
                                                                 </label>
+                                                            <?php }else { ?>
+                                                                <input type="checkbox" class="form-check-input" value="Master of Ceremony" name="mc">Master of Ceremony
+                                                            <?php } ?>   
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
+                                                                <?php if ($paket['dokumentasi']) {?>
+                                                                    <input type="checkbox" class="form-check-input" value="Documentation" name="dokumentasi" checked >Documentation
+                                                                <?php }else { ?>
                                                                     <input type="checkbox" class="form-check-input" value="Documentation" name="dokumentasi">Documentation
+                                                                <?php } ?>   
                                                                 </label>
                                                             </div>
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
+                                                                <?php if ($paket['makeup']) {?>
+                                                                    <input type="checkbox" class="form-check-input" value="Makeup" name="makeup"checked>Makeup
+                                                                <?php }else { ?>
                                                                     <input type="checkbox" class="form-check-input" value="Makeup" name="makeup">Makeup
+                                                                <?php } ?>
                                                                 </label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="comment">Deskripsi:</label>
-                                                                <textarea class="form-control" rows="5" name="deskripsi"><?= set_value('deskripsi') ?></textarea>
+                                                                <textarea class="form-control" rows="5" name="deskripsi"><?= $paket['deskripsi'] ?></textarea>
                                                                 <?=form_error('deskripsi','<small class="text-danger">','</small>');?>
                                                             </div>
                                                             <div class="form-group">

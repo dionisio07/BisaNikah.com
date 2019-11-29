@@ -60,7 +60,7 @@
                                 <a href="" class="btn btn-success btn-lg btn-block">Pesan </a>
                                 <a href="" class="btn btn-primary btn-lg btn-block">Custom </a>
                                 <?php if ($this->session->userdata('idRole')==2) {?>
-                                    <a href="" class="btn btn-danger btn-lg btn-block">Edit </a>
+                                    <a href="<?= base_url('admin/editPaketView/'.$paket['idPaket']) ?>" class="btn btn-danger btn-lg btn-block">Edit </a>
                                 <?php }?>
                             </div>
                         </div>
