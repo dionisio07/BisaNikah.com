@@ -34,7 +34,7 @@ class admin extends CI_Controller {
          }
          else {
             $foto = $_FILES['foto'];
-            if($foto=''){
+            if($foto['name']==''){
                 $foto = 'default.png';
             }else{
                 $config['upload_path'] = './upload/';

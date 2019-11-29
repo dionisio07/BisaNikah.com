@@ -58,7 +58,6 @@
                             </div>
                             <div>
                                 <a href="" class="btn btn-success btn-lg btn-block">Pesan </a>
-                                <a href="" class="btn btn-primary btn-lg btn-block">Custom </a>
                                 <?php if ($this->session->userdata('idRole')==2) {?>
                                     <a href="<?= base_url('admin/editPaketView/'.$paket['idPaket']) ?>" class="btn btn-danger btn-lg btn-block">Edit </a>
                                 <?php }?>
@@ -76,9 +75,6 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- Start List And Grid View -->
-                        <ul class="pro__details__tab" role="tablist">
-                            <li role="presentation" class="description active"><a href="#description" role="tab" data-toggle="tab">description</a></li>
-                        </ul>
                         <!-- End List And Grid View -->
                     </div>
                 </div>

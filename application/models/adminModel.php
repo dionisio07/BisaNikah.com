@@ -32,6 +32,10 @@ class adminModel extends CI_Model{
         $this->db->where('idPaket', $id);
         $this->db->delete('paket');
     }
+    public function getNewPaket(){
+        $sql = 'SELECT *from paket ORDER by idPaket DESC LIMIT 1';
+        return $this->db->query($sql)->row_array();
+    }
 
 
 

@@ -6,7 +6,8 @@ class customer extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->library('form_validation');
-		$this->load->model('userModel');
+        $this->load->model('userModel');
+		$this->load->model('adminModel');
 	}
     public function register(){
          //validation form
@@ -75,9 +76,11 @@ class customer extends CI_Controller {
         $this->load->view('contact');
         $this->load->view('footer');	
     }
-    public function detailPaket(){
+    public function detailPaket($id){
+        $data['paket'] = $this->adminModel->getPaket($id);
+        $data['lokasi'] = $this->adminModel->getLocationById($data['paket']['idLokasi']);
         $this->load->view('header');
-        $this->load->view('product-details');
+        $this->load->view('product-details',$data);
         $this->load->view('footer');	
     }
 
