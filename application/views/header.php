@@ -7,11 +7,11 @@
     <title>BisaNikah</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/images/logo.png')?>">
     <link rel="apple-touch-icon" href="<?= base_url('assets/apple-touch-icon.png')?>">
-    
+
 
     <!-- All css files are included here. -->
     <!-- Bootstrap fremwork main css -->
@@ -45,7 +45,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="menumenu__container clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5"> 
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
                                 <div class="logo">
                                      <a href="<?= base_url()?>"><img width="80" src="<?= site_url('assets/images/logo.png') ?>" alt="logo images"></a>
                                 </div>
@@ -58,40 +58,40 @@
                                             <ul class="dropdown mega_dropdown">
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Jakarta</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="product-grid.html">Jakarta Pusat</a></li>
                                                         <li><a href="cart.html">Jakarta Barat</a></li>
                                                         <li><a href="checkout.html">Jakarta Utara</a></li>
                                                         <li><a href="wishlist.html">Jakarta Selatan</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Bandung</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="#">Bandung Kota</a></li>
                                                         <li><a href="#">Lembang</a></li>
                                                         <li><a href="#">Ciater</a></li>
                                                         <li><a href="#">Cimahi</a></li>
                                                         <li><a href="#">Kabupaten Bandung</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Bali</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="#">Denpasar</a></li>
                                                         <li><a href="#">Kuta</a></li>
                                                         <li><a href="#">Sanur</a></li>
                                                         <li><a href="#">Jimbaran</a></li>
                                                         <li><a href="#">Nusa Dua</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="#">Tentang Kami</a></li>
-                                        <li class="drop"><a href="">Berita</a> </li>
+                                        <!-- <li class="drop"><a href="">Berita</a> </li> -->
                                     </ul>
                                 </nav>
 
@@ -109,7 +109,7 @@
                                             <li><a href="#">contact</a></li>
                                         </ul>
                                     </nav>
-                                </div>  
+                                </div>
                             </div>
                             <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
                                 <div class="header__right">
@@ -176,11 +176,11 @@
     <title>BisaNikah</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/images/logo.png')?>">
     <link rel="apple-touch-icon" href="<?= base_url('assets/apple-touch-icon.png')?>">
-    
+
 
     <!-- All css files are included here. -->
     <!-- Bootstrap fremwork main css -->
@@ -214,7 +214,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="menumenu__container clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5"> 
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
                                 <div class="logo">
                                      <a href="<?= base_url()?>"><img width="80" src="<?= site_url('assets/images/logo.png') ?>" alt="logo images"></a>
                                 </div>
@@ -227,40 +227,40 @@
                                             <ul class="dropdown mega_dropdown">
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Jakarta</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="product-grid.html">Jakarta Pusat</a></li>
                                                         <li><a href="cart.html">Jakarta Barat</a></li>
                                                         <li><a href="checkout.html">Jakarta Utara</a></li>
                                                         <li><a href="wishlist.html">Jakarta Selatan</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Bandung</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="#">Bandung Kota</a></li>
                                                         <li><a href="#">Lembang</a></li>
                                                         <li><a href="#">Ciater</a></li>
                                                         <li><a href="#">Cimahi</a></li>
                                                         <li><a href="#">Kabupaten Bandung</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Bali</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="#">Denpasar</a></li>
                                                         <li><a href="#">Kuta</a></li>
                                                         <li><a href="#">Sanur</a></li>
                                                         <li><a href="#">Jimbaran</a></li>
                                                         <li><a href="#">Nusa Dua</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="<?= base_url("customer/contact")?>">Tentang Kami</a></li>
-                                        <li class="drop"><a href="">Berita</a> </li>
+                                        <!-- <li class="drop"><a href="">Berita</a> </li> -->
                                     </ul>
                                 </nav>
 
@@ -278,7 +278,7 @@
                                             <li><a href="#">contact</a></li>
                                         </ul>
                                     </nav>
-                                </div>  
+                                </div>
                             </div>
                             <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
                                 <div class="header__right">
@@ -349,11 +349,11 @@
     <title>BisaNikah</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/images/logo.png')?>">
     <link rel="apple-touch-icon" href="<?= base_url('assets/apple-touch-icon.png')?>">
-    
+
 
     <!-- All css files are included here. -->
     <!-- Bootstrap fremwork main css -->
@@ -387,7 +387,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="menumenu__container clearfix">
-                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5"> 
+                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
                                 <div class="logo">
                                      <a href="<?= base_url()?>"><img width="80" src="<?= site_url('assets/images/logo.png') ?>" alt="logo images"></a>
                                 </div>
@@ -400,40 +400,40 @@
                                             <ul class="dropdown mega_dropdown">
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Jakarta</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="product-grid.html">Jakarta Pusat</a></li>
                                                         <li><a href="cart.html">Jakarta Barat</a></li>
                                                         <li><a href="checkout.html">Jakarta Utara</a></li>
                                                         <li><a href="wishlist.html">Jakarta Selatan</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Bandung</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="#">Bandung Kota</a></li>
                                                         <li><a href="#">Lembang</a></li>
                                                         <li><a href="#">Ciater</a></li>
                                                         <li><a href="#">Cimahi</a></li>
                                                         <li><a href="#">Kabupaten Bandung</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                                 <!-- Start Single Mega MEnu -->
                                                 <li><a class="mega__title" href="product-grid.html">Bali</a>
-                                                    <ul class="mega__item">
+                                                    <!-- <ul class="mega__item">
                                                         <li><a href="#">Denpasar</a></li>
                                                         <li><a href="#">Kuta</a></li>
                                                         <li><a href="#">Sanur</a></li>
                                                         <li><a href="#">Jimbaran</a></li>
                                                         <li><a href="#">Nusa Dua</a></li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </li>
                                                 <!-- End Single Mega MEnu -->
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="<?= base_url("customer/contact")?>">Tentang Kami</a></li>
-                                        <li class="drop"><a href="">Berita</a> </li>
+                                        <!-- <li class="drop"><a href="">Berita</a> </li> -->
                                     </ul>
                                 </nav>
 
@@ -451,7 +451,7 @@
                                             <li><a href="#">contact</a></li>
                                         </ul>
                                     </nav>
-                                </div>  
+                                </div>
                             </div>
                             <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
                                 <div class="header__right">
