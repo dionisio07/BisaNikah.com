@@ -56,12 +56,21 @@
                                     <?= $paket['wo'] ?>,<?= $paket['mc'] ?>,<?= $paket['dokumentasi'] ?>,<?= $paket['decoration'] ?>,<?= $paket['makeup'] ?>
                                 </p>
                             </div>
-                            <div>
-                                <a href="" class="btn btn-success btn-lg btn-block">Pesan </a>
-                                <?php if ($this->session->userdata('idRole')==2) {?>
-                                    <a href="<?= base_url('admin/editPaketView/'.$paket['idPaket']) ?>" class="btn btn-danger btn-lg btn-block">Edit </a>
-                                <?php }?>
-                            </div>
+                            <br>
+                            <form method ="post" action="<?= base_url('customer/addPesanan/'.$paket['idPaket']) ?>" >
+                                <div class="single-input">
+                                    <label for="user-text">Tanggal Pernikahan</label>
+                                    <input type="date" name="tgl" value="<?= set_value('tgl') ?>">
+                                    <?=form_error('tgl','<small class="text-danger">','</small>');?>
+                                </div>
+                                <div>
+                                <br>
+                                    <button type="submit" class="btn btn-success btn-lg btn-block">Pesan</button>
+                                    <?php if ($this->session->userdata('idRole')==2) {?>
+                                        <a href="<?= base_url('admin/editPaketView/'.$paket['idPaket']) ?>" class="btn btn-danger btn-lg btn-block">Edit </a>
+                                    <?php }?>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

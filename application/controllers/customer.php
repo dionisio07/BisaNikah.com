@@ -87,17 +87,48 @@ class customer extends CI_Controller {
     public function showPaket(){
 
     }
-    public function createPesanan(){
-
+    public function addPesanan($id){
+        $this->form_validation->set_rules('tgl','tgl','required');
+        if(($this->form_validation->run()== false)){
+            $data['paket'] = $this->adminModel->getPaket($id);
+            $data['lokasi'] = $this->adminModel->getLocationById($data['paket']['idLokasi']);
+            $this->load->view('header');
+            $this->load->view('product-details',$data);
+            $this->load->view('footer');	
+        }else if ($this->session->userdata('username')==null){
+            $this->session->set_flashdata('message','<div class ="alert alert-danger role = alert">Anda Harus Login Terlebih Dahulu</div>');
+            $this->load->view('header');
+            $this->load->view('login');
+            $this->load->view('footer');	
+        }else{
+            $data = [
+                'username' => $this->session->userdata('username'),
+                'idPaket' => $id,
+                'tglPemesanan' => date('Y-m-d'),
+                'tglAcara' => $this->input->post('tgl')
+            ];
+            var_dump($data);
+            $this->userModel->pesanan($data);
+            $this->cart();
+        }
     }
-    public function cekPesanan(){
-
+    public function cart(){
+        $data['pesanan'] = $this->userModel->getAllPesanan($this->session->userdata('username'));
+        $this->load->view('header');
+        $this->load->view('cart',$data);
+        $this->load->view('footer');
     }
     public function editPesanan(){
 
     }
-    public function deletePesanan(){
-
+    public function deletePesanan($id){
+       $this->userModel->deletePesanan($id);
+       $this->cart();
+    }
+    public function infoPembayaran(){
+        $this->load->view('header');
+        $this->load->view('infoPembayaran');
+        $this->load->view('footer');
     }
     public function createPembayaran(){
 

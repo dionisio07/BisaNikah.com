@@ -54,42 +54,7 @@
                                 <nav class="main__menu__nav hidden-xs hidden-sm">
                                     <ul class="main__menu">
                                         <li class="drop"><a href="<?= base_url()?>">Home</a></li>
-                                        <li class="drop"><a href="#">Lokasi</a>
-                                            <ul class="dropdown mega_dropdown">
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Jakarta</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="product-grid.html">Jakarta Pusat</a></li>
-                                                        <li><a href="cart.html">Jakarta Barat</a></li>
-                                                        <li><a href="checkout.html">Jakarta Utara</a></li>
-                                                        <li><a href="wishlist.html">Jakarta Selatan</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Bandung</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="#">Bandung Kota</a></li>
-                                                        <li><a href="#">Lembang</a></li>
-                                                        <li><a href="#">Ciater</a></li>
-                                                        <li><a href="#">Cimahi</a></li>
-                                                        <li><a href="#">Kabupaten Bandung</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Bali</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="#">Denpasar</a></li>
-                                                        <li><a href="#">Kuta</a></li>
-                                                        <li><a href="#">Sanur</a></li>
-                                                        <li><a href="#">Jimbaran</a></li>
-                                                        <li><a href="#">Nusa Dua</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                            </ul>
-                                        </li>
+                                       
                                         <li class="drop"><a href="#">Tentang Kami</a></li>
                                         <!-- <li class="drop"><a href="">Berita</a> </li> -->
                                     </ul>
@@ -99,13 +64,7 @@
                                     <nav id="mobile_dropdown">
                                         <ul>
                                             <li><a href="<?= base_url()?>">Home</a></li>
-                                            <li><a href="#">Lokasi</a>
-                                                <ul>
-                                                    <li><a href="#">Jakarta</a></li>
-                                                    <li><a href="#">Bandung</a></li>
-                                                    <li><a href="#">Denpasar</a></li>
-                                                </ul>
-                                            </li>
+                                            
                                             <li><a href="#">contact</a></li>
                                         </ul>
                                     </nav>
@@ -223,42 +182,7 @@
                                 <nav class="main__menu__nav hidden-xs hidden-sm">
                                     <ul class="main__menu">
                                         <li class="drop"><a href="<?= base_url()?>">Home</a></li>
-                                        <li class="drop"><a href="#">Lokasi</a>
-                                            <ul class="dropdown mega_dropdown">
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Jakarta</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="product-grid.html">Jakarta Pusat</a></li>
-                                                        <li><a href="cart.html">Jakarta Barat</a></li>
-                                                        <li><a href="checkout.html">Jakarta Utara</a></li>
-                                                        <li><a href="wishlist.html">Jakarta Selatan</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Bandung</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="#">Bandung Kota</a></li>
-                                                        <li><a href="#">Lembang</a></li>
-                                                        <li><a href="#">Ciater</a></li>
-                                                        <li><a href="#">Cimahi</a></li>
-                                                        <li><a href="#">Kabupaten Bandung</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Bali</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="#">Denpasar</a></li>
-                                                        <li><a href="#">Kuta</a></li>
-                                                        <li><a href="#">Sanur</a></li>
-                                                        <li><a href="#">Jimbaran</a></li>
-                                                        <li><a href="#">Nusa Dua</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                            </ul>
-                                        </li>
+                                       
                                         <li class="drop"><a href="<?= base_url("customer/contact")?>">Tentang Kami</a></li>
                                         <!-- <li class="drop"><a href="">Berita</a> </li> -->
                                     </ul>
@@ -268,13 +192,6 @@
                                     <nav id="mobile_dropdown">
                                         <ul>
                                             <li><a href="<?= base_url()?>">Home</a></li>
-                                            <li><a href="#">Lokasi</a>
-                                                <ul>
-                                                    <li><a href="#">Jakarta</a></li>
-                                                    <li><a href="#">Bandung</a></li>
-                                                    <li><a href="#">Denpasar</a></li>
-                                                </ul>
-                                            </li>
                                             <li><a href="#">contact</a></li>
                                         </ul>
                                     </nav>
@@ -283,10 +200,10 @@
                             <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
                                 <div class="header__right">
                                     <div class="header__search search search__open">
-                                        <a href="#"><i class="icon-magnifier icons"></i></a>
+                                       
                                     </div>
                                     <div class="header__account">
-                                        <a href="#"><i class="icon-handbag icons"></i></a>
+                                        <a href="<?= base_url('customer/cart') ?>"><i class="icon-handbag icons"></i></a>
                                     </div>
                                     <div class="htc__shopping__cart">
                                         <a class="cart__menu" href="#"><i class="icon-user icons"></i></a>
@@ -332,7 +249,7 @@
                     </div>
                     <ul class="shopping__btn">
                         <li><a href="#">Profil</a></li>
-                        <li><a href="#">CheckOut</a></li>
+                        <li><a href="<?= base_url('customer/cart') ?>">Cart</a></li>    
                         <li><a href="<?= Base_url("customer/logout") ?>">Logout</a></li>
                     </ul>
                 </div>
@@ -396,42 +313,6 @@
                                 <nav class="main__menu__nav hidden-xs hidden-sm">
                                     <ul class="main__menu">
                                         <li class="drop"><a href="<?= base_url()?>">Home</a></li>
-                                        <li class="drop"><a href="#">Lokasi</a>
-                                            <ul class="dropdown mega_dropdown">
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Jakarta</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="product-grid.html">Jakarta Pusat</a></li>
-                                                        <li><a href="cart.html">Jakarta Barat</a></li>
-                                                        <li><a href="checkout.html">Jakarta Utara</a></li>
-                                                        <li><a href="wishlist.html">Jakarta Selatan</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Bandung</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="#">Bandung Kota</a></li>
-                                                        <li><a href="#">Lembang</a></li>
-                                                        <li><a href="#">Ciater</a></li>
-                                                        <li><a href="#">Cimahi</a></li>
-                                                        <li><a href="#">Kabupaten Bandung</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                                <!-- Start Single Mega MEnu -->
-                                                <li><a class="mega__title" href="product-grid.html">Bali</a>
-                                                    <!-- <ul class="mega__item">
-                                                        <li><a href="#">Denpasar</a></li>
-                                                        <li><a href="#">Kuta</a></li>
-                                                        <li><a href="#">Sanur</a></li>
-                                                        <li><a href="#">Jimbaran</a></li>
-                                                        <li><a href="#">Nusa Dua</a></li>
-                                                    </ul> -->
-                                                </li>
-                                                <!-- End Single Mega MEnu -->
-                                            </ul>
-                                        </li>
                                         <li class="drop"><a href="<?= base_url("customer/contact")?>">Tentang Kami</a></li>
                                         <!-- <li class="drop"><a href="">Berita</a> </li> -->
                                     </ul>
@@ -441,13 +322,7 @@
                                     <nav id="mobile_dropdown">
                                         <ul>
                                             <li><a href="<?= base_url()?>">Home</a></li>
-                                            <li><a href="#">Lokasi</a>
-                                                <ul>
-                                                    <li><a href="#">Jakarta</a></li>
-                                                    <li><a href="#">Bandung</a></li>
-                                                    <li><a href="#">Denpasar</a></li>
-                                                </ul>
-                                            </li>
+                                          
                                             <li><a href="#">contact</a></li>
                                         </ul>
                                     </nav>
@@ -456,10 +331,10 @@
                             <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
                                 <div class="header__right">
                                     <div class="header__search search search__open">
-                                        <a href="#"><i class="icon-magnifier icons"></i></a>
+                                      
                                     </div>
                                     <div class="header__account">
-                                        <a href="#"><i class="icon-handbag icons"></i></a>
+                                        <a href="<?= base_url('customer/cart') ?>"><i class="icon-handbag icons"></i></a>
                                     </div>
                                     <div class="htc__shopping__cart">
                                         <a class="cart__menu" href="#"><i class="icon-user icons"></i></a>
@@ -505,7 +380,7 @@
                     </div>
                     <ul class="shopping__btn">
                         <li><a href="#">Profil</a></li>
-                        <li><a href="<?= base_url('Welcome/cart')?>">CheckOut</a></li>
+                        <li><a href="<?= base_url('customer/cart') ?>">Cart</a></li>
                         <li><a href="<?= Base_url("admin/createPaket") ?>">Create Paket</a></li>
                         <li><a href="<?= Base_url("admin/showPaket") ?>">List Paket</a></li>
                         <li><a href="<?= Base_url("customer/logout") ?>">Logout</a></li>

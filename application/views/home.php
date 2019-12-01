@@ -11,38 +11,14 @@
                                         <h2><?= $new['namaPaket'] ?></h2>
                                         <h1>Rp.<?= $new['harga'] ?></h1>
                                         <div class="cr__btn">
-                                            <a href="cart.html">Shop Now</a>
+                                            <a href="<?= base_url("customer/detailPaket/".$new['idPaket']) ?>">Shop Now</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
                                 <div class="slide__thumb">
-                                    <img src="<?= base_url("upload/".$new['gambar']) ?>" alt="slider images"width="290px" height="370px">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Slide -->
-                <!-- Start Single Slide -->
-                <div class="single__slide animation__style01 slider__fixed--height">
-                    <div class="container">
-                        <div class="row align-items__center">
-                            <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
-                                <div class="slide">
-                                    <div class="slider__inner">
-                                        <h2><?= $new['namaPaket'] ?></h2>
-                                        <h1><?= $new['harga'] ?></h1>
-                                        <div class="cr__btn">
-                                            <a href="cart.html">Show Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
-                                <div class="slide__thumb">
-                                    <img src="<?= base_url("upload/".$new['gambar']) ?>" alt="slider images" width="290px" height="370px">
+                                    <img src="<?= base_url("upload/".$new['gambar']) ?>" alt="slider images">
                                 </div>
                             </div>
                         </div>
@@ -73,7 +49,7 @@
                                     <div class="category">
                                         <div class="ht__cat__thumb">
                                             <a href="<?= base_url("customer/detailPaket/".$p['idPaket']) ?>">
-                                                <img src="<?= base_url("upload/".$p['gambar']) ?>" alt="product images" width="290px" height="370px">
+                                                <img src="<?= base_url("upload/".$p['gambar']) ?>" alt="product images" width="290px" height="270px">
                                             </a>
                                         </div>
                                         <div class="fr__hover__info">
