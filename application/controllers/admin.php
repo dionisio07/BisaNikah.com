@@ -108,40 +108,19 @@ class admin extends CI_Controller {
          }
          else {
             $foto = $_FILES['foto'];
-            if($foto==''){
-                $foto = 'default.png';
-            }else{
+                $cek = true;
                 $config['upload_path'] = './upload/';
                 $config['allowed_types']= 'jpg|png|jpeg';
                 $this->load->library('upload',$config);
                 if(!$this->upload->do_upload('foto')){
-                    echo $this->upload->display_errors();
+                    $cek = false;
                 }else{
                     $foto = $this->upload->data('file_name');
                 }
-            }
-            
-            if($foto['name']==''){
-                $dataa = $this->adminModel->getPaket($id);
-                $data =[
-                   
-                    'idPaket'=>$id,
-                    'namaPaket' =>$this->input->post('namaPaket'),
-                    'harga' =>$this->input->post('harga'),
-                    'deskripsi'=>$this->input->post('deskripsi'),
-                    'gedung' =>$this->input->post('gedung'),
-                    'decoration'=>$this->input->post('decoration'),
-                    'catering'=>$this->input->post('catering'),
-                    'cake'=>$this->input->post('cake'),
-                    'band'=>$this->input->post('band'),
-                    'wo'=>$this->input->post('wo'),
-                    'mc'=>$this->input->post('mc'),
-                    'dokumentasi'=>$this->input->post('dokumentasi'),
-                    'makeup'=>$this->input->post('makeup'),
-                    'idLokasi'=>$this->input->post('lokasi'),
-                    'gambar'=>$dataa['gambar']
-                ];
-            }else{
+                if(!$cek){
+                    $foto = "default.png";
+                }
+           
                 $data =[
                     'idPaket'=>$id,
                     'namaPaket' =>$this->input->post('namaPaket'),
@@ -159,7 +138,7 @@ class admin extends CI_Controller {
                     'idLokasi'=>$this->input->post('lokasi'),
                     'gambar'=>$foto
                 ];
-            }   
+              
             $this->adminModel->editPaket($data);            
             $this->session->set_flashdata('message','<div class ="alert alert-success role = alert">Berhasil Mengedit Paket  </div>');
             $data['lokasi'] = $this->adminModel->getLokasi();

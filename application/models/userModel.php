@@ -27,6 +27,23 @@ class userModel extends CI_Model{
         $this->db->where('idPesanan', $id);
         $this->db->delete('pesanan');
     }
+    public function addPembayaran($data){
+        $this->db->insert('pembayaran',$data);
+        $this->db->where('idPesanan',$data['idPesanan']);
+        $status = [
+            'status'=> 1
+        ];
+        $this->db->update('pesanan',$status);
+    }
+    public function getPembayaran($idPesanan){
+        $this->db->select('paket.namaPaket,pembayaran.tglPembayaran,paket.harga,pesanan.tglAcara,pesanan.status');
+        $this->db->from('pembayaran');
+        $this->db->join('pesanan','pembayaran.idPesanan = pesanan.idPesanan');
+        $this->db->join('paket','pesanan.idPaket = paket.idPaket');
+        $this->db->where('pesanan.idPesanan',$idPesanan);
+        return $this->db->get()->row_array();
+        
+    }
 
 
 

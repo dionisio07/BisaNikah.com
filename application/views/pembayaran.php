@@ -9,7 +9,7 @@
                                 <nav class="bradcaump-inner">
                                   <a class="breadcrumb-item" href="<?= base_url()?>">Home</a>
                                   <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                                  <span class="breadcrumb-item active">shopping cart</span>
+                                  <span class="breadcrumb-item active">Invoice</span>
                                 </nav>
                             </div>
                         </div>
@@ -26,24 +26,30 @@
                         <form action="#">               
                             <div class="table-content table-responsive">
                                 <table>
-                                    <thead>
-                                        <tr>
-                                            <th class="product-thumbnail">products</th>
-                                            <th class="product-name">Nama Paket</th>
-                                            <th class="product-price">Harga</th>
-                                            <th class="product-remove">Remove</th>
-                                        </tr>
-                                    </thead>
+                                    
                                     <tbody>
-                                    <?php foreach ($pesanan as $p) {?>
+                                    
                                         <tr>
-                                            <td class="product-thumbnail"><a href="<?= base_url('customer/infoPembayaran/'.$p['idPesanan']) ?>"><img src="<?= base_url("upload/".$p['gambar']);?>" alt="product img" /></a></td>
-                                            <td class="product-name"><a href="<?= base_url('customer/infoPembayaran/'.$p['idPesanan']) ?>"><?= $p['namaPaket'] ?></a>
-                                            </td>
-                                            <td class="product-price"><span class="amount"><?= $p['harga'] ?></span></td>
-                                            <td class="product-remove"><a href="<?= base_url('customer/deletePesanan/'.$p['idPesanan']) ?>"><i class="icon-trash icons"></i></a></td>
+                                           <td class="product-name">Nama Paket </td> 
+                                           <td class="product-name">: </td> 
+                                           <td class="product-name"><?= $data["namaPaket"] ?> </td>
                                         </tr>
-                                        <?php }?>
+                                        <tr>
+                                           <td class="product-name">Harga </td> 
+                                           <td class="product-name">: </td> 
+                                           <td class="product-name"><?= $data['harga'] ?> </td>
+                                        </tr>
+                                        <tr>
+                                           <td class="product-name">Tanggal Pernikahan</td> 
+                                           <td class="product-name">: </td> 
+                                           <td class="product-name"><?= $data['tglAcara'] ?> </td>
+                                        </tr>
+                                        <tr>
+                                           <td class="product-name">Status pembayaran</td> 
+                                           <td class="product-name">: </td> 
+                                           <td class="product-name">Berhasil </td>
+                                        </tr>
+                                   
                                     </tbody>
                                 </table>
                             </div>

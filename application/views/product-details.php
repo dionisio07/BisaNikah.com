@@ -6,9 +6,9 @@
                         <div class="col-xs-12">
                             <div class="bradcaump__inner">
                                 <nav class="bradcaump-inner">
-                                  <a class="breadcrumb-item" href="index.html">Home</a>
+                                  <a class="breadcrumb-item" href="<?= base_url() ?>">Home</a>
                                   <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                                  <a class="breadcrumb-item" href="product-grid.html">Products</a>
+                                  <a class="breadcrumb-item" href="">Products</a>
                                   <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
                                   <span class="breadcrumb-item active"><?= $paket['namaPaket'] ?></span>
                                 </nav>
@@ -47,6 +47,7 @@
                         <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12 smt-40 xmt-40">
                             <div class="ht__product__dtl">
                                 <h2><?= $paket['namaPaket'] ?></h2>
+                                <h2> Harga : <?= $paket['harga'] ?></h2>
                                 <h6>Lokasi: <span><?= $lokasi['kota'] ?></span></h6>
                                 <ul  class="pro__prize">
                                     <li><?= $paket['namaPaket'] ?></li>

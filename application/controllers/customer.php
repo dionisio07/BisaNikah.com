@@ -107,7 +107,6 @@ class customer extends CI_Controller {
                 'tglPemesanan' => date('Y-m-d'),
                 'tglAcara' => $this->input->post('tgl')
             ];
-            var_dump($data);
             $this->userModel->pesanan($data);
             $this->cart();
         }
@@ -125,25 +124,24 @@ class customer extends CI_Controller {
        $this->userModel->deletePesanan($id);
        $this->cart();
     }
-    public function infoPembayaran(){
+    public function infoPembayaran($idPesanan){
+        $data['id'] = $idPesanan;
         $this->load->view('header');
-        $this->load->view('infoPembayaran');
+        $this->load->view('infoPembayaran',$data);
         $this->load->view('footer');
+        
     }
-    public function createPembayaran(){
-
-    }
-    public function editPembayaran(){
-
-    }
-    public function deletePembayaran(){
-
-    }
-    public function searchPaket(){
-
-    }
-    public function konfirmasiPesanan(){
-
+    public function createPembayaran($idPesanan){
+        $data = [
+            'idPesanan' => $idPesanan,
+            'caraPembayaran' => "ATM",
+            'tglPembayaran'=> date('Y-m-d')
+        ];
+        $this->userModel->addPembayaran($data);
+        $get['data'] = $this->userModel->getPembayaran($idPesanan);
+        $this->load->view('header');
+        $this->load->view('pembayaran',$get);
+        $this->load->view('footer');
     }
     public function logout(){
         $this->session->unset_userdata('username');

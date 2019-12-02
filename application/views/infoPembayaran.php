@@ -1,3 +1,4 @@
+
 <div class="checkout-wrap ptb--100">
             <div class="container">
                 <div class="row">
@@ -41,7 +42,7 @@
                                 </div>
                                 
                                         <ul class="payment__btn">
-                                            <li class="active"><a href="<?= base_url('customer/infoPembayaran') ?>">payment</a></li>
+                                            <li class="active"><a href="<?= base_url('customer/createPembayaran/'.$id) ?>">payment</a></li>
                                         </ul>
                                     </div>
                                 </div>

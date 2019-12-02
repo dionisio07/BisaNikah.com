@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Nov 2019 pada 09.26
+-- Waktu pembuatan: 02 Des 2019 pada 11.13
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.2.12
 
@@ -71,7 +71,12 @@ CREATE TABLE `paket` (
 --
 
 INSERT INTO `paket` (`idPaket`, `namaPaket`, `harga`, `deskripsi`, `gedung`, `decoration`, `catering`, `cake`, `band`, `wo`, `mc`, `dokumentasi`, `makeup`, `idLokasi`, `gambar`) VALUES
-(3, 'Paket pernikahan silver', 50000000, 'mantap', 'Gedung', 'Decoration', 'Catering', 'Wedding Cake', 'Band', 'Wedding Organizer', 'Master of Ceremony', 'Documentation', 'Makeup', 1, 'gambar1.jpg');
+(3, 'Paket pernikahan silver', 50000000, 'mantap', 'Gedung', 'Decoration', 'Catering', 'Wedding Cake', 'Band', 'Wedding Organizer', 'Master of Ceremony', 'Documentation', 'Makeup', 1, 'gambar1.jpg'),
+(12, 'paket PUBG', 300000, 'hemat', 'Gedung', 'Decoration', 'Catering', NULL, NULL, NULL, 'Master of Ceremony', 'Documentation', 'Makeup', 1, 'PUBG-Feature-640x3533.jpg'),
+(13, 'Paket pernikahan silver', 500000, 'asda', 'Gedung', 'Decoration', 'Catering', 'Wedding Cake', 'Band', 'Wedding Organizer', 'Master of Ceremony', 'Documentation', 'Makeup', 1, 'default.png'),
+(14, 'Paket pernikahan silver', 500000, 'asda', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'default.png'),
+(15, 'Paket pernikahan silver', 500000, 'asda', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'default.png'),
+(16, 'Paket pernikahan silver', 500000, 'asda', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'default.png');
 
 -- --------------------------------------------------------
 
@@ -86,6 +91,14 @@ CREATE TABLE `pembayaran` (
   `tglPembayaran` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `pembayaran`
+--
+
+INSERT INTO `pembayaran` (`idPembayaran`, `idPesanan`, `caraPembayaran`, `tglPembayaran`) VALUES
+(1, 8, 'ATM', '2019-12-02'),
+(21, 3, 'ATM', '2019-12-02');
+
 -- --------------------------------------------------------
 
 --
@@ -98,8 +111,17 @@ CREATE TABLE `pesanan` (
   `idPaket` int(11) NOT NULL,
   `tglPemesanan` date NOT NULL,
   `tglAcara` date NOT NULL,
-  `isKonfirmasi` tinyint(1) NOT NULL DEFAULT '0'
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `pesanan`
+--
+
+INSERT INTO `pesanan` (`idPesanan`, `username`, `idPaket`, `tglPemesanan`, `tglAcara`, `status`) VALUES
+(2, 'test', 3, '2019-11-30', '2019-11-04', 0),
+(3, 'test', 12, '2019-12-01', '2019-12-04', 1),
+(8, 'admin', 12, '2019-12-02', '2019-12-03', 1);
 
 -- --------------------------------------------------------
 
@@ -205,19 +227,19 @@ ALTER TABLE `lokasi`
 -- AUTO_INCREMENT untuk tabel `paket`
 --
 ALTER TABLE `paket`
-  MODIFY `idPaket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idPaket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `idPembayaran` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `idPesanan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `userrole`

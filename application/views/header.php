@@ -55,7 +55,7 @@
                                     <ul class="main__menu">
                                         <li class="drop"><a href="<?= base_url()?>">Home</a></li>
                                        
-                                        <li class="drop"><a href="#">Tentang Kami</a></li>
+                                        <li class="drop"><a href="<?= base_url("customer/contact")?>">Tentang Kami</a></li>
                                         <!-- <li class="drop"><a href="">Berita</a> </li> -->
                                     </ul>
                                 </nav>
@@ -65,7 +65,7 @@
                                         <ul>
                                             <li><a href="<?= base_url()?>">Home</a></li>
                                             
-                                            <li><a href="#">contact</a></li>
+                                            <li><a href="<?= base_url("customer/contact")?>">contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -73,7 +73,7 @@
                             <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
                                 <div class="header__right">
                                     <div class="header__search search search__open">
-                                        <a href="#"><i class="icon-magnifier icons"></i></a>
+                                       
                                     </div>
                                     <div class="header__account">
                                         <a class="cart__menu" href="#"><i class="icon-user icons"></i></a>
@@ -192,7 +192,7 @@
                                     <nav id="mobile_dropdown">
                                         <ul>
                                             <li><a href="<?= base_url()?>">Home</a></li>
-                                            <li><a href="#">contact</a></li>
+                                            <li><a href="<?= base_url("customer/contact")?>">contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -200,13 +200,13 @@
                             <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
                                 <div class="header__right">
                                     <div class="header__search search search__open">
-                                       
+                                      
                                     </div>
                                     <div class="header__account">
                                         <a href="<?= base_url('customer/cart') ?>"><i class="icon-handbag icons"></i></a>
                                     </div>
                                     <div class="htc__shopping__cart">
-                                        <a class="cart__menu" href="#"><i class="icon-user icons"></i></a>
+                                        <a class="cart__menu" href="<?= base_url("customer/contact")?>"><i class="icon-user icons"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +248,7 @@
                         <a href="#"><i class="zmdi zmdi-close"></i></a>
                     </div>
                     <ul class="shopping__btn">
-                        <li><a href="#">Profil</a></li>
+                        
                         <li><a href="<?= base_url('customer/cart') ?>">Cart</a></li>    
                         <li><a href="<?= Base_url("customer/logout") ?>">Logout</a></li>
                     </ul>
@@ -379,7 +379,7 @@
                         <a href="#"><i class="zmdi zmdi-close"></i></a>
                     </div>
                     <ul class="shopping__btn">
-                        <li><a href="#">Profil</a></li>
+                      
                         <li><a href="<?= base_url('customer/cart') ?>">Cart</a></li>
                         <li><a href="<?= Base_url("admin/createPaket") ?>">Create Paket</a></li>
                         <li><a href="<?= Base_url("admin/showPaket") ?>">List Paket</a></li>
