@@ -34,17 +34,17 @@ class admin extends CI_Controller {
          }
          else {
             $foto = $_FILES['foto'];
-            if($foto['name']==''){
-                $foto = 'default.png';
+            $cek = true;
+            $config['upload_path'] = './upload/';
+            $config['allowed_types']= 'jpg|png|jpeg';
+            $this->load->library('upload',$config);
+            if(!$this->upload->do_upload('foto')){
+                $cek = false;
             }else{
-                $config['upload_path'] = './upload/';
-                $config['allowed_types']= 'jpg|png|jpeg';
-                $this->load->library('upload',$config);
-                if(!$this->upload->do_upload('foto')){
-                    echo $this->upload->display_errors();
-                }else{
-                    $foto = $this->upload->data('file_name');
-                }
+                $foto = $this->upload->data('file_name');
+            }
+            if(!$cek){
+                $foto = "default.png    ";
             }
             $data =[
                 'namaPaket' =>$this->input->post('namaPaket'),
