@@ -118,7 +118,7 @@ class admin extends CI_Controller {
                     $foto = $this->upload->data('file_name');
                 }
                 if(!$cek){
-                    $foto = "default.png";
+                    $foto = "default.png    ";
                 }
            
                 $data =[
@@ -156,7 +156,4 @@ class admin extends CI_Controller {
         $this->load->view('listPaket',$data);
         $this->load->view('footer');
     }    
-    public function setRole($idUser,$role){
-        $this->userModel->setRole($idUser,$role);
-    }
 }

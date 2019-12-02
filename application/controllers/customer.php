@@ -84,9 +84,6 @@ class customer extends CI_Controller {
         $this->load->view('footer');	
     }
 
-    public function showPaket(){
-
-    }
     public function addPesanan($id){
         $this->form_validation->set_rules('tgl','tgl','required');
         if(($this->form_validation->run()== false)){
@@ -116,9 +113,6 @@ class customer extends CI_Controller {
         $this->load->view('header');
         $this->load->view('cart',$data);
         $this->load->view('footer');
-    }
-    public function editPesanan(){
-
     }
     public function deletePesanan($id){
        $this->userModel->deletePesanan($id);
